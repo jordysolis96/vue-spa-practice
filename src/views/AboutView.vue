@@ -1,5 +1,5 @@
 <script setup>
-let name = "jordy";
+let name = " jordy";
 </script>
 
 <template>
