@@ -1,12 +1,16 @@
-<script setup></script>
 <template>
   <div class="topnav">
-    <a class="active" href="#">Home</a>
-    <a href="#">News</a>
-    <a href="#">Contact</a>
-    <a href="#">About</a>
+    <RouterLink class="link-item" to="/">Home</RouterLink>
+    <RouterLink class="link-item" to="/about">About</RouterLink>
+    <RouterLink class="link-item" to="/exercise">Exercise</RouterLink>
+    <RouterLink class="link-item" to="/demo">demo</RouterLink>
+    <RouterLink class="link-item" to="/rps">RPS</RouterLink>
+    <RouterLink class="link-item" to="/products">products</RouterLink>
+    <RouterLink class="link-item" to="/checkout">Checkout</RouterLink>
+    <RouterLink class="link-item" to="/inventory">Inventory</RouterLink>
   </div>
 </template>
+
 <style scoped>
 /* Add a black background color to the top navigation */
 .topnav {
@@ -15,7 +19,7 @@
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.topnav .link-item {
   float: left;
   color: #f2f2f2;
   text-align: center;
@@ -25,14 +29,15 @@
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.topnav .link-item:hover {
   background-color: #ddd;
   color: black;
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
+.topnav .link-item:active {
   background-color: #04AA6D;
   color: white;
 }
+
 </style>
