@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import TopNav from './components/TopNav.vue'
 let user = {
   id: 922022,
-  username: "CodeyThaDuck",
+  username: "Jordy",
   password: "gocodeup",
   themePreference: "dark-theme",
   email: "codey@codeup.com"
