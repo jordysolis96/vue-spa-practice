@@ -1,3 +1,22 @@
+<script setup>
+// Using const because props are READ-ONLY and should not be changed.
+const props = defineProps(['userData', 'greeting'])
+
+// const props = defineProps({
+//        greeting: String,
+//        otherProp: Number,
+//        userData: {
+//          type: Object,
+//          default: {
+//
+//          }
+//        }
+//    })
+console.log(props.greeting);
+console.log(props.userData)
+
+</script>
+
 <template>
   <div class="topnav">
     <RouterLink class="link-item" to="/">Home</RouterLink>
@@ -8,7 +27,11 @@
     <RouterLink class="link-item" to="/products">products</RouterLink>
     <RouterLink class="link-item" to="/checkout">Checkout</RouterLink>
     <RouterLink class="link-item" to="/inventory">Inventory</RouterLink>
+    <p class="link-item" style="color: #04AA6D">Welcome, {{ userData.username }}!</p>
+<!--    to access userData when props takes in an object-->
+<!--    <p class="link-item" style="color: #04AA6D">Welcome, {{ props.userData.username }}!</p>-->
   </div>
+
 </template>
 
 <style scoped>

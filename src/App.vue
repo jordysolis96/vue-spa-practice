@@ -1,11 +1,17 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import TopNav from './components/TopNav.vue'
+let user = {
+  id: 922022,
+  username: "CodeyThaDuck",
+  password: "gocodeup",
+  email: "codey@codeup.com"
+}
 </script>
 
 <template>
 
-  <TopNav />
+  <TopNav v-bind:user-data="user" />
 
 <!--      <nav>-->
 <!--        <RouterLink to="/">Home</RouterLink>-->
